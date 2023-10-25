@@ -208,15 +208,16 @@
             <div class="card body">
                 <div class="row">
                     <div class="container">
-                        <b class="display-6" id="kontak">Form Pengiriman Pesan</b>
+                        <b class="display-6" id="kontak">Pesan</b>
+                        <br>
                         <form id="messageForm">
                             <div class="mb-3">
                                 <label for="nama" class="form-label">Nama</label>
                                 <input type="text" class="form-control" id="nama" name="nama" required>
                             </div>
                             <div class="mb-3">
-                                <label for="pesan" class="form-label">Pesan</label>
-                                <textarea class="form-control" id="pesan" name="pesan" rows="5" required></textarea>
+                                <label for="pesanan" class="form-label">Pesanan</label>
+                                <textarea class="form-control" id="pesanan" name="pesanan" rows="5" required></textarea>
                             </div>
                             <button type="submit" class="btn btn-primary">Kirim Pesan</button>
                         </form>
@@ -297,16 +298,22 @@
 
                 // Ambil data dari formulir
                 const nama = $("#nama").val();
-                const pesan = $("#pesan").val();
+                const pesan = $("#pesanan").val();
 
                 // Simulasikan pengiriman pesan (Anda dapat mengganti ini dengan logika nyata)
                 // Di sini kita hanya menampilkan pesan notifikasi
                 Swal.fire({
-                    title: `Pesan Terkirim`,
-                    text: `Pesan dari ${nama}: ${pesan}`,
+                    title: `Pesanan Terkirim`,
+                    text: `Pesanan dari ${nama}: ${pesan}`,
                     icon: 'success'
                 });
             });
+        });
+         // Menangani pengiriman pesan ketika formulir disubmit
+         var pesanForm = document.getElementById("pesanan");
+        pesanan.addEventListener("submit", function(event) {
+            event.preventDefault(); // Menghentikan pengiriman form standar
+            kirimPesan(); // Memanggil fungsi kirimPesan
         });
     </script>
 </body>
