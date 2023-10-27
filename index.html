@@ -4,26 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Landing</title>
-   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-   <!-- Mengimpor Bootstrap CSS -->
-   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-   <!-- Mengimpor FontAwesome CSS (Opsional) -->
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css" rel="stylesheet"/>
+
+    <link rel="icon" href="1694716131277.png" type="image/x-icon">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bangers&display=swap"
+        rel="stylesheet"
+        />
+        <script
+        src="https://kit.fontawesome.com/70c682a6d6.js"
+        crossorigin="anonymous"
+        ></script>
     <style>
-        .navbar {
-            background-color: rgba(0, 0, 0, 0.5); /* Ubah nilai alpha sesuai kebutuhan Anda */
-        }
-        .header-jumbotron{
-            min-height: 730px;
-            background-image: url("hade.png");
+           .header-jumbotron {
+            min-height: 655px;
+            background-image: url(hade.png);
             background-size: cover;
             background-position: center;
-            color: #FFF;
+            color: #fff;
             text-align: center;
             display: flex;
             justify-content: center;
             align-items: center;
-        }    
+        }
+
         .socialButton {
             display: flex;
             align-items: center;
@@ -372,7 +382,7 @@
             white-space: nowrap;
             margin: 0 auto;
             letter-spacing: 2px;
-            animation: typing 2s steps(20, end), blink-caret 0.5s step-end infinite;
+            animation: typing 3s steps(35, end), blink-caret 1s step-end infinite;
         }
 
         @keyframes typing {
@@ -417,36 +427,57 @@
     </style>
 </head>
 <body>
-    <nav class= "navbar navbar-expand-lg navbar-social bg-transparent bg-light fonts fixed-top">
-        <a class="navbar-brand" href="#">Angkringanku</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#beranda">Beranda <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#menu">Menu</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#tentang">Tentang</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#kontak">Kontak</a>
-                </li>
-            </ul>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-social bg-transparent bg-light fonts fixed-top">
+        <!-- Tautan Logo atau Judul -->
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"><h3>AngkringanKu</h3></a>
+            <!-- Tombol Toggle (untuk tampilan responsif pada perangkat kecil) -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- Daftar Navigasi Utama -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://www.facebook.com/palrei07"><i class="fab fa-facebook"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://twitter.com/itil_kuda1234"><i class="fab fa-twitter"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://www.instagram.com/nplrhnsyh/"><i class="fab fa-instagram"></i></a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Beranda <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#menu">Menu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#tentang">Tentang</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#kontak">Kontak</a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </nav>
-    <div class="jumbotron jumbroton-fluid header-jumbotron" id="beranda">
-        <div class="card-shadow">
-        <div class="container">
-            <h1 class="display-4">
-                <b>Angkringan </b>
-            </h1>
+
+    <!-- <div class="container mt-5">
+        <div class="text-center">
+            <h1 class="display-4 typewriter" id="welcome-text"></h1>
         </div>
-    </div>
+    </div> -->
+
+    <div class="jumbotron jumbotron-fluid header-jumbotron">
+        <div class="container text-center mt-5">
+            <h1 class="display-4 typewriter fonts typing-text" id="welcome-text">Selamat Datang</h1>
+            <p class="lead fade-in pfont">Nikmati suasana tenang dan makanan tradisional kami.</p>
+        </div>
     </div>
     <br><br>
     <div class="container">
